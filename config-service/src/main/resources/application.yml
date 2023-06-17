@@ -1,0 +1,14 @@
+
+server:
+  port: ${PORT:8081}
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          default-label: config-server
+          uri: https://github.com/Lincol1999/Microservicio-con-Spring-Boot
+          search-paths:
+            - config-data
+  application:
+    name: config-service

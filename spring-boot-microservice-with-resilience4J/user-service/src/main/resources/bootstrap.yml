@@ -1,11 +1,12 @@
 
-server:
-  port: 8001
-
 spring:
   application:
     name: user-service
-
+  cloud:
+    config:
+      enabled: true
+      uri:
+        - http://localhost:8081
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://${DB_HOST:localhost:3306}/UserDb?serverTimezone=America/Lima
