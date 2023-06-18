@@ -6,9 +6,13 @@ spring:
     config:
       server:
         git:
-          default-label: config-server
+          # Es la rama donde tiene que mirar
+          default-label: eureka
+          #Es el repositorio
           uri: https://github.com/Lincol1999/Microservicio-con-Spring-Boot
+          #Carpeta donde va a buscar
           search-paths:
             - config-data
+  #El nombre
   application:
     name: config-service
