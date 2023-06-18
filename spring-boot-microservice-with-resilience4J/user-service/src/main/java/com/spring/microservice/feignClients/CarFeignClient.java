@@ -9,7 +9,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
-@FeignClient(name = "car-service", url = "http://localhost:8002", path = "/api/cars/v1")
+
+//Como estamos registrando el servicio ya no es necesario la url
+@FeignClient(name = "car-service"
+//        , url = "http://localhost:8002"
+        , path = "/api/cars/v1")
 public interface CarFeignClient {
     @PostMapping(value = "")
     Car createCar(@RequestBody Car car);
