@@ -18,17 +18,17 @@ spring:
         locator:
           enabled: true
       routes:
-      - id: user-service
-        uri: lb://user-service
-        predicates:
-          - Path: /api/users/v1/**
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path: /api/users/v1/**
 
-      - id: car-service
-        uri: lb://car-service
-        predicates:
-          - Path: /api/cars/v1/**
+        - id: car-service
+          uri: lb://car-service
+          predicates:
+            - Path: /api/cars/v1/**
 
-      - id: bike-service
-        uri: lb://bike-service
-        predicates:
-          - Path: /api/bikes/v1/**
+        - id: bike-service
+          uri: lb://bike-service
+          predicates:
+            - Path: /api/bikes/v1/**
