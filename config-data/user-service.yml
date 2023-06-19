@@ -1,11 +1,12 @@
 server:
-  port: 8001
+  port: ${PORT:${SERVER_PORT:0}}
 
 eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
-    service-url: 
+    service-url:
       default-zone: http://localhost:8761/eureka
-    instance:
-      hostname: localhost
+  instance:
+    #ya no será 8003, sino que sera dinámico, el nombre de la aplicación, la instancia, y le asignamos un número aleatorio.
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
