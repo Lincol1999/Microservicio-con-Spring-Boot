@@ -7,7 +7,7 @@ spring:
       server:
         git:
           # Es la rama donde tiene que mirar
-          default-label: gateway
+          default-label: circuit-breaker
           #Es el repositorio
           uri: https://github.com/Lincol1999/Microservicio-con-Spring-Boot
           #Carpeta donde va a buscar
