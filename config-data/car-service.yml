@@ -10,3 +10,7 @@ eureka:
   instance:
     #ya no será 8003, sino que sera dinámico, el nombre de la aplicación, la instancia, y le asignamos un número aleatorio.
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    
+spring:
+  application:
+    zipkin: http://localhost:9411
